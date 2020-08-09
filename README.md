@@ -12,33 +12,38 @@ Spinner со списком языков - Русский и Английски�
 
 Например для русского:
 
-```Locale locale = new Locale("ru");
+```
+Locale locale = new Locale("ru");
 ```
 Вносим изменения в конфигурацию:
 
-```Configuration config = new Configuration();
+```
+Configuration config = new Configuration();
 config.setLocale(locale)
 ```
 
 Обновляем конфигурацию:
 
-```getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+```
+getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
 ```
 
 Перезапускаем наш активити:
-```recreate();
+```
+recreate();
 ```
 
 В итоге получаем:
 
-```     @Override
-        public void onClick(View v) {
-            Locale locale = new Locale("ru");
-            Configuration config = new Configuration();
-            config.setLocale(locale);
-            getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-            recreate();
-         }
+```
+    @Override
+    public void onClick(View v) {
+        Locale locale = new Locale("ru");
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+        getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        recreate();
+    }
 ```
 
 ![](screen.png)
